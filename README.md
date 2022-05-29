@@ -27,6 +27,8 @@ are provided to make SBOMs for R things.
 
 ## Help Wanted/TODOs
 
+### Issues
+
 -   [ ] Handle Licenses
 -   [ ] Handle Authors
 -   [ ] Get some buy-in on purls, BOM-refs, etc
@@ -67,7 +69,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ## {
 ##   "bomFormat": "CycloneDX",
 ##   "specVersion": "1.4",
-##   "serialNumber": "urn:uuid:51e8cf25-5f69-4d99-b8ee-beca7409e000",
+##   "serialNumber": "urn:uuid:92394f6a-d7b6-48d1-adb5-8735e89e969a",
 ##   "version": 1,
 ##   "metadata": {
 ##     "component": {
@@ -342,9 +344,9 @@ validate_sbom(text=x)
 | Lang | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 |:-----|---------:|-----:|----:|-----:|------------:|-----:|---------:|-----:|
 | R    |        5 | 0.31 |  89 | 0.33 |          14 | 0.16 |       27 | 0.19 |
-| YAML |        2 | 0.12 |  35 | 0.13 |          10 | 0.12 |        2 | 0.01 |
-| Rmd  |        1 | 0.06 |  10 | 0.04 |          19 | 0.22 |       41 | 0.29 |
-| SUM  |        8 | 0.50 | 134 | 0.50 |          43 | 0.50 |       70 | 0.50 |
+| YAML |        2 | 0.12 |  35 | 0.13 |          10 | 0.11 |        2 | 0.01 |
+| Rmd  |        1 | 0.06 |  10 | 0.04 |          20 | 0.23 |       42 | 0.30 |
+| SUM  |        8 | 0.50 | 134 | 0.50 |          44 | 0.50 |       71 | 0.50 |
 
 clock Package Metrics for sbom
 
