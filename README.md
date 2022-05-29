@@ -25,6 +25,17 @@ A “Software Bill of Materials” (SBOM) is a nested inventory for
 software, a list of ingredients that make up software components. Tools
 are provided to make SBOMs for R things.
 
+## Help Wanted/TODOs
+
+-   [ ] Handle Licenses
+-   [ ] Handle Authors
+-   [ ] Get some buy-in on purls, BOM-refs, etc
+-   [ ] Handle non-CRAN packages
+-   [ ] Handle Shiny apps
+-   [ ] Handle R “projects”
+-   [ ] Dependency trees
+-   [ ] Handle system requirements & (generically) stuff in src
+
 ## What’s Inside The Tin
 
 The following functions are implemented:
@@ -56,7 +67,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ## {
 ##   "bomFormat": "CycloneDX",
 ##   "specVersion": "1.4",
-##   "serialNumber": "urn:uuid:39c854a4-d5b3-4785-b709-0862807d7416",
+##   "serialNumber": "urn:uuid:51e8cf25-5f69-4d99-b8ee-beca7409e000",
 ##   "version": 1,
 ##   "metadata": {
 ##     "component": {
@@ -330,10 +341,10 @@ validate_sbom(text=x)
 
 | Lang | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 |:-----|---------:|-----:|----:|-----:|------------:|-----:|---------:|-----:|
-| R    |        5 | 0.31 |  89 | 0.33 |          14 | 0.17 |       27 | 0.22 |
-| YAML |        2 | 0.12 |  35 | 0.13 |          10 | 0.12 |        2 | 0.02 |
-| Rmd  |        1 | 0.06 |  10 | 0.04 |          17 | 0.21 |       32 | 0.26 |
-| SUM  |        8 | 0.50 | 134 | 0.50 |          41 | 0.50 |       61 | 0.50 |
+| R    |        5 | 0.31 |  89 | 0.33 |          14 | 0.16 |       27 | 0.19 |
+| YAML |        2 | 0.12 |  35 | 0.13 |          10 | 0.12 |        2 | 0.01 |
+| Rmd  |        1 | 0.06 |  10 | 0.04 |          19 | 0.22 |       41 | 0.29 |
+| SUM  |        8 | 0.50 | 134 | 0.50 |          43 | 0.50 |       70 | 0.50 |
 
 clock Package Metrics for sbom
 

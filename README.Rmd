@@ -15,6 +15,17 @@ hrbrpkghelpr::stinking_badges()
 hrbrpkghelpr::yank_title_and_description()
 ```
 
+## Help Wanted/TODOs
+
+- [ ] Handle Licenses
+- [ ] Handle Authors
+- [ ] Get some buy-in on purls, BOM-refs, etc 
+- [ ] Handle non-CRAN packages 
+- [ ] Handle Shiny apps 
+- [ ] Handle R "projects" 
+- [ ] Dependency trees 
+- [ ] Handle system requirements & (generically) stuff in src 
+
 ## What's Inside The Tin
 
 The following functions are implemented:
