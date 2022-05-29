@@ -4,15 +4,20 @@
 \name{sbom}
 \alias{sbom}
 \alias{sbom-package}
-\title{...}
+\title{Generate Software Bill of Materials for R Things}
 \description{
-A good description goes here otherwise CRAN checks fail.
+A "Software Bill of Materials" (SBOM) is a nested inventory for software,
+a list of ingredients that make up software components. Tools are provided
+to make SBOMs for R things.
+}
+\references{
+\url{https://www.ntia.gov/SBOM}
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://git.rud.is/hrbrmstr/sbom}
-  \item Report bugs at \url{https://git.rud.is/hrbrmstr/sbom/issues}
+  \item \url{https://github.com/hrbrmstr/sbom}
+  \item Report bugs at \url{https://github.com/hrbrmstr/sbom/issues}
 }
 
 }

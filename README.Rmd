@@ -39,6 +39,14 @@ packageVersion("sbom")
 
 ```
 
+```{r ex-01}
+cat(x <- cran_pkg_sbom("ndjson"))
+```
+
+```{r ex-02}
+validate_sbom(text=x)
+```
+
 ## sbom Metrics
 
 ```{r cloc, echo=FALSE}

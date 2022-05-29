@@ -1,6 +1,6 @@
 Package: sbom
 Type: Package
-Title: sbom Title Goes Here Otherwise CRAN Checks Fail
+Title: Generate Software Bill of Materials for R Things
 Version: 0.1.0
 Date: 2022-05-29
 Authors@R: c(
@@ -8,17 +8,20 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-5670-2640"))
   )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A good description goes here otherwise CRAN checks fail.
-URL: https://git.rud.is/hrbrmstr/sbom
-BugReports: https://git.rud.is/hrbrmstr/sbom/issues
+Description: A "Software Bill of Materials" (SBOM) is a nested inventory for software,
+    a list of ingredients that make up software components. Tools are provided
+    to make SBOMs for R things.
+URL: https://github.com/hrbrmstr/sbom
+BugReports: https://github.com/hrbrmstr/sbom/issues
 Encoding: UTF-8
-License: AGPL
+License: MIT + file LICENSE
 Suggests:
     tinytest
 Depends:
     R (>= 3.6.0)
 Imports:
-    httr2,
-    jsonlite
+    pkgdepends,
+    jsonlite,
+    utils
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
