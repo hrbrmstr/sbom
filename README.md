@@ -61,7 +61,7 @@ library(sbom)
 
 # current version
 packageVersion("sbom")
-## [1] '0.1.0'
+## [1] '0.1.1'
 ```
 
 ``` r
@@ -69,7 +69,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ## {
 ##   "bomFormat": "CycloneDX",
 ##   "specVersion": "1.4",
-##   "serialNumber": "urn:uuid:541a3bd1-1887-44da-84d0-033b9614917d",
+##   "serialNumber": "urn:uuid:61ceb100-9a3d-4ef9-bed7-66f7b2660ed2",
 ##   "version": 1,
 ##   "metadata": {
 ##     "component": {
@@ -78,7 +78,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "ndjson",
 ##       "version": "0.8.0",
 ##       "description": "Wicked-Fast Streaming 'JSON' ('ndjson') Reader",
-##       "author": ["Bob Rudis", "Deepak Bandyopadhyay", "Lutz Kettner", "Niels Lohmann"],
+##       "author": ["Bob Rudis; Niels Lohmann; Deepak Bandyopadhyay; Lutz Kettner"],
 ##       "group": "",
 ##       "licenses": ["MIT"],
 ##       "hashes": [
@@ -97,7 +97,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "Rcpp",
 ##       "version": "1.0.8.3",
 ##       "description": "Seamless R and C++ Integration",
-##       "author": ["Dirk Eddelbuettel", "James Joseph Balamuta", "Romain Fran\\c{c}ois"],
+##       "author": ["Dirk Eddelbuettel; Romain Francois; JJ Allaire; Kevin Ushey; Qiang Kou; Nathan Russell; Inaki Ucar; Douglas Bates; John Chambers"],
 ##       "group": "",
 ##       "licenses": ["GPL-2.0-or-later"],
 ##       "hashes": [
@@ -148,7 +148,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "data.table",
 ##       "version": "1.14.2",
 ##       "description": "Extension of `data.frame`",
-##       "author": ["Arun Srinivasan", "Matt Dowle"],
+##       "author": ["Matt Dowle; Arun Srinivasan"],
 ##       "group": "",
 ##       "licenses": ["MPL-2.0"],
 ##       "hashes": [
@@ -199,7 +199,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "glue",
 ##       "version": "1.6.2",
 ##       "description": "Interpreted String Literals",
-##       "author": ["Jennifer Bryan", "Jim Hester"],
+##       "author": ["Jim Hester; Jennifer Bryan"],
 ##       "group": "",
 ##       "licenses": ["MIT"],
 ##       "hashes": [
@@ -216,7 +216,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "lifecycle",
 ##       "version": "1.0.1",
 ##       "description": "Manage the Life Cycle of your Package Functions",
-##       "author": ["Hadley Wickham", "Lionel Henry"],
+##       "author": ["Lionel Henry; Hadley Wickham"],
 ##       "group": "",
 ##       "licenses": ["MIT"],
 ##       "hashes": [
@@ -233,7 +233,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "magrittr",
 ##       "version": "2.0.3",
 ##       "description": "A Forward-Pipe Operator for R",
-##       "author": ["Hadley Wickham", "Stefan Milton Bache"],
+##       "author": ["Stefan Milton Bache; Hadley Wickham"],
 ##       "group": "",
 ##       "licenses": ["MIT"],
 ##       "hashes": [
@@ -250,7 +250,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "pillar",
 ##       "version": "1.7.0",
 ##       "description": "Coloured Formatting for Columns",
-##       "author": ["Hadley Wickham", "Kirill Müller"],
+##       "author": ["Kirill Müller; Hadley Wickham"],
 ##       "group": "",
 ##       "licenses": ["MIT"],
 ##       "hashes": [
@@ -284,7 +284,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "rlang",
 ##       "version": "1.0.2",
 ##       "description": "Functions for Base Types and Core R and 'Tidyverse' Features",
-##       "author": ["Hadley Wickham", "Lionel Henry"],
+##       "author": ["Lionel Henry; Hadley Wickham"],
 ##       "group": "",
 ##       "licenses": ["MIT"],
 ##       "hashes": [
@@ -301,7 +301,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "tibble",
 ##       "version": "3.1.7",
 ##       "description": "Simple Data Frames",
-##       "author": ["Hadley Wickham", "Kirill Müller"],
+##       "author": ["Kirill Müller; Hadley Wickham"],
 ##       "group": "",
 ##       "licenses": ["MIT"],
 ##       "hashes": [
@@ -335,7 +335,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "vctrs",
 ##       "version": "0.4.1",
 ##       "description": "Vector Helpers",
-##       "author": ["Davis Vaughan", "Hadley Wickham", "Lionel Henry"],
+##       "author": ["Hadley Wickham; Lionel Henry; Davis Vaughan"],
 ##       "group": "",
 ##       "licenses": ["MIT"],
 ##       "hashes": [
@@ -359,10 +359,10 @@ validate_sbom(text=x)
 
 | Lang | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 |:-----|---------:|-----:|----:|-----:|------------:|-----:|---------:|-----:|
-| R    |        5 | 0.31 | 160 | 0.39 |          23 | 0.22 |      683 | 0.47 |
-| YAML |        2 | 0.12 |  35 | 0.09 |          10 | 0.09 |        2 | 0.00 |
-| Rmd  |        1 | 0.06 |  10 | 0.02 |          20 | 0.19 |       42 | 0.03 |
-| SUM  |        8 | 0.50 | 205 | 0.50 |          53 | 0.50 |      727 | 0.50 |
+| R    |        5 | 0.31 | 136 | 0.38 |          23 | 0.22 |      683 | 0.47 |
+| YAML |        2 | 0.12 |  35 | 0.10 |          10 | 0.09 |        2 | 0.00 |
+| Rmd  |        1 | 0.06 |  10 | 0.03 |          20 | 0.19 |       42 | 0.03 |
+| SUM  |        8 | 0.50 | 181 | 0.50 |          53 | 0.50 |      727 | 0.50 |
 
 clock Package Metrics for sbom
 

@@ -27,19 +27,7 @@ cran_pkg_sbom <- function(pkg) {
         name = u(y$package[root]),
         version = u(y$version[root]),
         description = u(gsub("\n", " ", utils::packageDescription(y$package[root])$Title)),
-        author = paste0(
-          sort(
-            unique(
-              unlist(
-                sapply(
-                  citation(y$package[root])$author,
-                  format,
-                  include = c("given", "family")
-                )
-              )
-            )
-          )
-        ),
+        author = paste0(format(citation(y$package[root], auto=packageDescription(y$package[root]))$author, include = c("given", "family")), collapse="; "),
         group = u(""),
         licenses = mk_lic(y$package[root]),
         hashes = if (is.na(y$sha256[root])) list() else
@@ -57,19 +45,7 @@ cran_pkg_sbom <- function(pkg) {
         name = u(y$package[idx]),
         version = u(y$version[idx]),
         description = u(gsub("\n", " ", utils::packageDescription(y$package[idx])$Title)),
-        author = paste0(
-          sort(
-            unique(
-              unlist(
-                sapply(
-                  citation(y$package[idx])$author,
-                  format,
-                  include = c("given", "family")
-                )
-              )
-            )
-          )
-        ),
+        author = paste0(format(citation(y$package[idx], auto=packageDescription(y$package[idx]))$author, include = c("given", "family")), collapse="; "),
         group = u(""),
         licenses = mk_lic(y$package[idx]),
         hashes = if (is.na(y$sha256[idx])) list() else
