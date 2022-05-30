@@ -69,7 +69,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ## {
 ##   "bomFormat": "CycloneDX",
 ##   "specVersion": "1.4",
-##   "serialNumber": "urn:uuid:c0849c36-9821-4e4d-910a-39b22cf2f888",
+##   "serialNumber": "urn:uuid:541a3bd1-1887-44da-84d0-033b9614917d",
 ##   "version": 1,
 ##   "metadata": {
 ##     "component": {
