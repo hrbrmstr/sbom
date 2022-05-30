@@ -29,8 +29,8 @@ are provided to make SBOMs for R things.
 
 ### Issues
 
--   [ ] Handle Licenses
--   [ ] Handle Authors
+-   [ ] Handle Licenses (PARTIAL SUPPORT EXISTS)
+-   [ ] Handle Authors (PARTIAL SUPPORT EXISTS)
 -   [ ] Get some buy-in on purls, BOM-refs, etc
 -   [ ] Handle non-CRAN packages
 -   [ ] Handle Shiny apps
@@ -69,7 +69,7 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ## {
 ##   "bomFormat": "CycloneDX",
 ##   "specVersion": "1.4",
-##   "serialNumber": "urn:uuid:92394f6a-d7b6-48d1-adb5-8735e89e969a",
+##   "serialNumber": "urn:uuid:c0849c36-9821-4e4d-910a-39b22cf2f888",
 ##   "version": 1,
 ##   "metadata": {
 ##     "component": {
@@ -78,8 +78,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "ndjson",
 ##       "version": "0.8.0",
 ##       "description": "Wicked-Fast Streaming 'JSON' ('ndjson') Reader",
+##       "author": ["Bob Rudis", "Deepak Bandyopadhyay", "Lutz Kettner", "Niels Lohmann"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MIT"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -96,8 +97,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "Rcpp",
 ##       "version": "1.0.8.3",
 ##       "description": "Seamless R and C++ Integration",
+##       "author": ["Dirk Eddelbuettel", "James Joseph Balamuta", "Romain Fran\\c{c}ois"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["GPL-2.0-or-later"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -112,8 +114,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "cli",
 ##       "version": "3.3.0",
 ##       "description": "Helpers for Developing Command Line Interfaces",
+##       "author": ["Gábor Csárdi"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MIT"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -128,8 +131,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "crayon",
 ##       "version": "1.5.1",
 ##       "description": "Colored Terminal Output",
+##       "author": ["Gábor Csárdi"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MIT"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -144,8 +148,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "data.table",
 ##       "version": "1.14.2",
 ##       "description": "Extension of `data.frame`",
+##       "author": ["Arun Srinivasan", "Matt Dowle"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MPL-2.0"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -160,8 +165,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "ellipsis",
 ##       "version": "0.3.2",
 ##       "description": "Tools for Working with ...",
+##       "author": ["Hadley Wickham"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MIT"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -176,8 +182,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "fansi",
 ##       "version": "1.0.3",
 ##       "description": "ANSI Control Sequence Aware String Functions",
+##       "author": ["Brodie Gaslam"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["GPL-2.0-or-later"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -192,8 +199,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "glue",
 ##       "version": "1.6.2",
 ##       "description": "Interpreted String Literals",
+##       "author": ["Jennifer Bryan", "Jim Hester"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MIT"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -208,8 +216,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "lifecycle",
 ##       "version": "1.0.1",
 ##       "description": "Manage the Life Cycle of your Package Functions",
+##       "author": ["Hadley Wickham", "Lionel Henry"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MIT"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -224,8 +233,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "magrittr",
 ##       "version": "2.0.3",
 ##       "description": "A Forward-Pipe Operator for R",
+##       "author": ["Hadley Wickham", "Stefan Milton Bache"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MIT"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -240,8 +250,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "pillar",
 ##       "version": "1.7.0",
 ##       "description": "Coloured Formatting for Columns",
+##       "author": ["Hadley Wickham", "Kirill Müller"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MIT"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -256,8 +267,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "pkgconfig",
 ##       "version": "2.0.3",
 ##       "description": "Private Configuration for 'R' Packages",
+##       "author": ["Gábor Csárdi"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MIT"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -272,8 +284,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "rlang",
 ##       "version": "1.0.2",
 ##       "description": "Functions for Base Types and Core R and 'Tidyverse' Features",
+##       "author": ["Hadley Wickham", "Lionel Henry"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MIT"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -288,8 +301,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "tibble",
 ##       "version": "3.1.7",
 ##       "description": "Simple Data Frames",
+##       "author": ["Hadley Wickham", "Kirill Müller"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MIT"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -304,8 +318,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "utf8",
 ##       "version": "1.2.2",
 ##       "description": "Unicode Text Processing",
+##       "author": ["Patrick O. Perry"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["Apache-2.0"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -320,8 +335,9 @@ cat(x <- cran_pkg_sbom("ndjson"))
 ##       "name": "vctrs",
 ##       "version": "0.4.1",
 ##       "description": "Vector Helpers",
+##       "author": ["Davis Vaughan", "Hadley Wickham", "Lionel Henry"],
 ##       "group": "",
-##       "licenses": [],
+##       "licenses": ["MIT"],
 ##       "hashes": [
 ##         {
 ##           "alg": "SHA-256",
@@ -343,10 +359,10 @@ validate_sbom(text=x)
 
 | Lang | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
 |:-----|---------:|-----:|----:|-----:|------------:|-----:|---------:|-----:|
-| R    |        5 | 0.31 |  89 | 0.33 |          14 | 0.16 |       27 | 0.19 |
-| YAML |        2 | 0.12 |  35 | 0.13 |          10 | 0.11 |        2 | 0.01 |
-| Rmd  |        1 | 0.06 |  10 | 0.04 |          20 | 0.23 |       42 | 0.30 |
-| SUM  |        8 | 0.50 | 134 | 0.50 |          44 | 0.50 |       71 | 0.50 |
+| R    |        5 | 0.31 | 160 | 0.39 |          23 | 0.22 |      683 | 0.47 |
+| YAML |        2 | 0.12 |  35 | 0.09 |          10 | 0.09 |        2 | 0.00 |
+| Rmd  |        1 | 0.06 |  10 | 0.02 |          20 | 0.19 |       42 | 0.03 |
+| SUM  |        8 | 0.50 | 205 | 0.50 |          53 | 0.50 |      727 | 0.50 |
 
 clock Package Metrics for sbom
 
