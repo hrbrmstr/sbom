@@ -38,7 +38,7 @@ cran_pkg_sbom <- function(pkg) {
         purl = u(sprintf("pkg:cran/%s@%s", y$package[root], y$version[root]))
       )
     ),
-    components = lapply(targets, \(idx) {
+    components = lapply(targets, (idx) {
       list(
         `bom-ref` = u(sprintf("pkg:cran/%s@%s", y$package[idx], y$version[idx])),
         type = u("library"),
